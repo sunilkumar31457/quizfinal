@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Sunil@123
+      MYSQL_DATABASE: quiz_app
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./quiz-backend
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/quiz_app?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Sunil@123
+      SPRING_PROFILES_ACTIVE: default
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./quiz-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:

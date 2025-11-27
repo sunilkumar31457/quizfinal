@@ -1,0 +1,10 @@
+target
+.mvn
+settings.xml
+*.log
+.git
+.github
+Dockerfile
+docker-compose.yml
+**/.DS_Store
+node_modules

@@ -1,0 +1,5 @@
+.dashboard-grid{gap:1.2rem}
+.hero{padding:1.6rem}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap}
+.hero-actions .btn{min-width:150px}
+.stat .stat-value{font-size:1.8rem;font-weight:800;margin-top:.2rem}

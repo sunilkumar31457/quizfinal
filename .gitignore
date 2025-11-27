@@ -1,0 +1,26 @@
+# Backend
+quiz-backend/target/
+quiz-backend/.mvn/
+quiz-backend/mvnw
+quiz-backend/mvnw.cmd
+
+# Frontend  
+quiz-frontend/node_modules/
+quiz-frontend/dist/
+quiz-frontend/dist-ssr/
+
+# Environment
+.env
+.env.local
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
